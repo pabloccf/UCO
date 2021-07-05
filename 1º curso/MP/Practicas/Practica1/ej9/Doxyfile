@@ -1,0 +1,16 @@
+# Nombre del proyecto
+PROJECT_NAME           = "Ejercicio 9"
+
+# Idioma: español
+OUTPUT_LANGUAGE        = Spanish
+
+OPTIMIZE_OUTPUT_FOR_C  = YES
+
+# Muestra la parte privada
+EXTRACT_PRIVATE        = YES
+
+# Muestra los ficheros "c"
+SOURCE_BROWSER         = YES
+
+# No se genera la documentación en latex
+GENERATE_LATEX         = NO
