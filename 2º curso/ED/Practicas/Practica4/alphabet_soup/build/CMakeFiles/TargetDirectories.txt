@@ -1,0 +1,4 @@
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica4/alphabet_soup/build/CMakeFiles/rebuild_cache.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica4/alphabet_soup/build/CMakeFiles/edit_cache.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica4/alphabet_soup/build/CMakeFiles/test_alphabet_soup_solver.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica4/alphabet_soup/build/CMakeFiles/test_trie.dir

@@ -1,0 +1,5 @@
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica1/check_brackets/build/CMakeFiles/rebuild_cache.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica1/check_brackets/build/CMakeFiles/edit_cache.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica1/check_brackets/build/CMakeFiles/test_check_brackets.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica1/check_brackets/build/CMakeFiles/test_stack.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica1/check_brackets/build/CMakeFiles/test_slist.dir

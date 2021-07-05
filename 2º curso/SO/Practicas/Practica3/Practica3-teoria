@@ -1,0 +1,62 @@
+/*
+Si utiliza hebras el programa para compilar habra que usar -lpthread
+*/
+
+#include <pthread.h>  //Para usar hebras y todas las funciones relacionadas con estas
+#include <semaphore.h>  //Para usar semaforos generales y todas las funciones de este, para usar semaforos binarios o mutex no tenemos que poner esta libreria
+------------------------------------------------------------------------------------
+                            //Mutex o semaforos binarios
+int pthread_mutex_init(pthread_mutex_t *mutex, const pthread_mutexattr_t *attr)  //Para inicializar un mutex
+    /*
+    mutex: es un puntero a un parametro del tipo pthread_mutex_t, que es el tipo de datos que usa la biblioteca pthread para controlar los mutex
+    attr: es un puntero a una estructura del tipo pthread_mutexattr_t8, y sirve para definir quétipo de mutex queremos: 
+    -Normal (PTHREAD_MUTEX_NORMAL).
+    -Recursivo (PTHREAD_MUTEX_RECURSIVE).
+    -Errorcheck (PTHREAD_MUTEX_ERRORCHECK).
+    Si el valor de attr es  NULL, la biblioteca le asignará un valor por defecto, concretamentePTHREAD_MUTEX_NORMAL.
+    */
+/*
+Tambien se puede inicicializar un mutex por defecto sin usar esta funcion y inicializarlo de esta forma:
+*/
+pthread_mutex_t mymutex = PTHREAD_MUTEX_INITIALIZER;
+
+int pthread_mutex_lock(pthread_mutex_t *mutex)  //Para pedir el bloqueo de un mutex
+    /*
+    mutex: es un puntero al mutex sobre el cual queremos pedir el bloqueo
+    */
+
+int pthread_mutex_unlock (pthread_mutex_t *mutex)  //Para pedir el desbloqueo de un mutex
+    /*
+    mutex: es el semaforo donde tenemos el bloqueo y queremos liberarlo
+    */
+
+int pthread_mutex_destroy(pthread_mutex_t *mutex)  //Para destruir un mutex
+    /*
+    mutex: es el mutex que queremos destruir
+    */
+
+------------------------------------------------------------------------------------
+                               //Semaforos generales
+sem_t sem;
+
+int sem_init(sem_t *sem, int pshared, int value);  //Para la inicializacion de un semaforo
+    /*
+    sem: es un puntero a un parametro de tipo sem_t que identifica el semaforo
+    pshared: Entero que determina si el semáforo sólo puede ser utilizado por hilos del mismo proceso que inicia el semáforo, en cuyo caso pondremos como parámetro el valor 0, o se puede utilizar para sincronizar procesos a través de fork(), en cuyo caso pondremos un valor de 1. Se usará un 1 cuando se utilice memoria compartida entre procesos.
+    value: entero que representa el valor que se asigna inicialmente al semaforo
+    */
+
+int sem_wait(sem_t* sem)  //Para pedir un bloqueo o bajada del semaforo
+    /*
+    sem: puntero a parametro de tipo sem_t que identifica el semaforo
+    */
+
+int sem_post(sem_t *sem);  //Para pedir un desbloqueo o subida del semaforo
+    /*
+    sem: puntero a parametro de tipo sem_t que identifica el semaforo
+    */
+
+int sem_destroy(sem_t *sem);  //Para destruir un semaforo
+    /*
+    sem: puntero al semaforo a destruir para liberar recursos
+    */

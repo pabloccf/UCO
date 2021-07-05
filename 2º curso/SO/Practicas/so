@@ -1,0 +1,11 @@
+errno: Es una variable que contiene el codigo de error del último error que se haya producido.
+
+perror: Es igual que un printf pero imprime información extra sobre el error que se haya producido.
+
+getpid(): Te devuelve la id del proceso que llame a la función.
+
+getppid(): Devuelve la id del proceso padre.
+
+fork(): Es la función que te crea el subproceso.
+
+wait(): Espera a que acabe un proceso hijo y devuelve su id del proceso (pid) y en la variable status almacena un código que representa cómo finalizo el proceso hijo.

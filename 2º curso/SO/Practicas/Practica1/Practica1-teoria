@@ -1,0 +1,35 @@
+#include <unistd.h>  //Para utilizar la funcion fork
+#include <sys/types.h>  //Para cargar el tipo pid_t
+#include <sys/wait.h>  //Para utilizar la funcion wait
+#include <errno.h>  //Para utilizar la variable errno
+#include <signal.h>  //Para usar las funciones relacionadas con señales
+#include <string.h>  //Para usar strerror(errno)
+-------------------------------------------------------------------------
+pid_t fork  //Creación de un proceso
+fork()  //Es la funcion que te crea el subproceso
+getppid()  //Devuelve la id del proceso padre
+getpid()  //Devuelve la id del proceso hijo
+getuid()  //Devuelve el id de usuario de su propietario
+void* signal(int sig, void (*func)(int))  //Capturar señales
+    
+    /*
+    sig->numero entero con el identificador de la señal
+    func->indica como se manejara la señal---- Si es SIG_DFL se usara el        manejo     por defecto de esa señal, si es SIG_IGN la señal sera ignorada.
+    */
+
+void kill(pid_t pid, int sig)  //Envia señales a otro proceso
+
+    /*
+    pid_t->es el identificador de proceso al que queremos enviar la señal
+    sig->es el numero de la señal que queremos enviar
+    */
+
+unsigned int alarm(unsigned seconds)  //Para generar una alarma
+
+    /*
+    seconds->numero de segundos que transcurriran antes de que se ejecute la señal
+    */
+
+strerror(errno) //Para describir errno
+
+

@@ -1,0 +1,37 @@
+/*
+Para compilar hay que usar -lpthread
+*/
+
+#include <pthread.h>  //Para usar hebras y todas las funciones relacionadas con estas
+----------------------------------------------------------------------------
+int pthread_create(pthread_t * thread, pthread_attr_t *attr, void * (*start_routine) (void *),void *arg)  //Para crear y ejecutar una hebra
+    /*
+    thread: es la hebra
+    attr: es un parametro que se debe inicializar previamente con los atributos que queramos. Si le pasamos como parametro NULL, la biblioteca le asignara al thread los atributos por defecto.
+    start_routine: direccion de memoria de la funcion que queremos que ejecute el thread.
+    arg: puntero al parametro que queremos pasarle a la funcion start_routine. Si no queremos pasarle nada este parametro tendra que ser NULL.
+    */
+
+int pthread_join(pthread_t th, void **thread_return)  //Para esperar la finalizacion de una hebra
+    /*
+    th: es el identificador del thread que queremos esperar
+    thread_return: es un puntero doble que apunta al resultado devuelto por el thread que estamos esperando cuando termino su ejecucion. Si es NULL significa que no nos importa el resultado de la hebra a la que estamos esperando.
+    */
+
+void pthread_exit (void *retval)  //Para finalizar una hebra y devolver resultados
+    /*
+    retval: puntero generico a los resultados que queremos devolver como resultado
+    */
+
+pthread_t pthread_self()  //Para obtener la informacion de una hebra
+
+int pthread_detach (pthread_t th)  //Para desconectar una hebra creada al terminar su ejecucion
+    /*
+    th: es el identificador del thread
+    */
+
+int pthread_kill(pthread_t thread, int signo)  //Para enviar una señal desde el proceso que la crea
+    /*
+    thread: identifica el thread al cual le queremos enviar la señal
+    signo: MACRO o numero de la señal que le queremos enviar al thread (podemos usar las constantes definidas en <signal.h>)
+    */

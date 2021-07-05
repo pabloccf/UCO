@@ -1,0 +1,5 @@
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica3/avl-tree/build/CMakeFiles/rebuild_cache.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica3/avl-tree/build/CMakeFiles/edit_cache.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica3/avl-tree/build/CMakeFiles/test_avltree.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica3/avl-tree/build/CMakeFiles/test_bstree.dir
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica3/avl-tree/build/CMakeFiles/test_avltnode.dir

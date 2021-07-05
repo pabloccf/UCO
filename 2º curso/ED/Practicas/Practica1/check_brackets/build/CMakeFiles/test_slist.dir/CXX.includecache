@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica1/check_brackets/slist.hpp
+iostream
+-
+sstream
+-
+string
+-
+memory
+-
+stdexcept
+-
+cassert
+-
+
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica1/check_brackets/test_slist.cpp
+stdexcept
+-
+iostream
+-
+fstream
+-
+string
+-
+slist.hpp
+/home/pabloccf/UCO_1/2ºcurso/2ºcuatrimestre/ED/Practicas/Practica1/check_brackets/slist.hpp
+

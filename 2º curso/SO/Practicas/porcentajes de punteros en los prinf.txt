@@ -1,0 +1,9 @@
+%d - int
+%ld - long int
+%i - int
+%f - float
+%lf - double
+%lu - puntero (long unsigned int) 
+%p - puntero
+%c - char
+%s - char* (cadena)
