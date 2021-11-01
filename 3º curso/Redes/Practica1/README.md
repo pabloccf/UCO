@@ -1,1 +1,1 @@
-Practicas de 3º de Ingenieria Informática
+Practicas de 3º de Ingeniería Informática
