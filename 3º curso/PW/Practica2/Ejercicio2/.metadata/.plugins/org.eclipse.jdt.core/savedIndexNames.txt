@@ -1,0 +1,5 @@
+INDEX VERSION 1.131+/home/pablo/UCO/curso3/PW/Ejercicio2/.metadata/.plugins/org.eclipse.jdt.core
+3738784194.index
+1812849001.index
+1865797976.index
+646308851.index
