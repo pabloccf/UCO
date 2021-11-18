@@ -1,0 +1,18 @@
+USUARIO 1
+pablo
+a
+a
+paiba
+a
+USUARIO 2
+jose
+a
+a
+a
+a
+USUARIO 3
+null
+null
+null
+null
+null
