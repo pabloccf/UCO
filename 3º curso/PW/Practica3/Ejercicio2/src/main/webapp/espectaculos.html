@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="view">
+        <div class="top-bar"></div>
+        <div class="grid">
+            <div class="left-panel background-1">
+                <div class="user-preview">
+                    <div class="grid">
+                        <div class="left-panel">
+                            <img src="res/profile_picture.png"></img>
+                        </div>
+                        <div class="right-panel">
+                            <p>Username</p>
+                            <p><a>Nombre </a><a>Apellidos</a></p>
+                            <p>email</p>
+                            <p>Tipo</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="section-btn">Usuarios</button>
+                <button class="section-btn" disabled>Espectaculos</button>
+                <button class="section-btn">Mis cr&iacute;ticas</button>
+                <button class="section-btn">Cerrar Sesi&oacute;n</button>
+            </div>
+            <div class="right-panel background-2">
+                <div class="data-view">
+                    <div id="pagesListTop" class="pages-list">
+                        <button class="page-btn" onclick="displayShows(usersList, 0)">1</button>
+                        <button class="page-btn" onclick="displayShows(usersList, 1)">2</button>
+                        <button class="page-btn" onclick="displayShows(usersList, 2)">3</button>
+                    </div>
+                    <br>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Titulo</th>
+                                <th>Descripci&oacute;n</th>
+                                <th>Categoria</th>
+                                <th>Aforo</th>
+                                <th>Entradas Vendidas</th>
+                                <th>Localidad</th>
+                                <th>Fecha</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                        </tbody>
+                    </table>
+            
+                    <br>
+                    <div id="pagesListBottom" class="pages-list">
+                        <button class="page-btn" onclick="displayShows(usersList, 0)">1</button>
+                        <button class="page-btn" onclick="displayShows(usersList, 1)">2</button>
+                        <button class="page-btn" onclick="displayShows(usersList, 2)">3</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const PAGE_SIZE = 25;
+
+        window.onload = function () {
+        	let find = GetURLParameter("Busqueda");
+            fetch('http://localhost:9805/Ejercicio2/BusquedaTituloCategoria')
+            //fetch('/ListaUsuarios')
+                .then(response => {
+                    if (response.status == 200) {
+                        return response.json()
+                    }
+                    else {
+                        let table = document.getElementById("tableBody");
+                        let errorText = document.createElement("a");
+                        errorText.classList.add("error-text");
+                        errorText.innerText = "No hay resultados";
+                        table.appendChild(errorText);
+                    }
+                })
+                .then(data => {
+                    if (data.length > PAGE_SIZE) {
+                        let pages = Math.ceil(data.length / PAGE_SIZE);
+
+                        let buttonDivTop = document.getElementById("pagesListTop");
+                        let buttonDivBottom = document.getElementById("pagesListBottom");
+                        
+                        for (let i = 0; i < pages; i++) {
+                            let button = document.createElement("button");
+                            button.innerText = i + 1;
+                            button.classList.add("page-btn");
+                            button.addEventListener("click", () => displayShows(data, i));
+
+                            buttonDivTop.appendChild(button);
+                            buttonDivBottom.appendChild(button);
+                        }
+                    }
+                    
+                    displayShows(data, 0);
+                })
+                .catch(err => console.error(err));
+        }
+
+        function displayShows (users, page) {
+            let table = document.getElementById("tableBody");
+            table.innerHTML = ""; //Clear the table's body
+            
+            let start = page * PAGE_SIZE;
+            let end = start + PAGE_SIZE;
+            end = end > users.length ? users.length : end;
+            for (let i =start; i < end-1; i++) {
+                let row = document.createElement("tr");
+                
+                let username = document.createElement("td");
+                username.innerText = users[i].username;
+                row.appendChild(username);
+                
+                let nombre = document.createElement("td");
+                nombre.innerText = users[i].nombre;
+                row.appendChild(nombre);
+                
+                let apellidos = document.createElement("td");
+                apellidos.innerText = users[i].apellidos;
+                row.appendChild(apellidos);
+                
+                let email = document.createElement("td");
+                email.innerText = users[i].email;
+                row.appendChild(email);
+                
+                let tipoUser = document.createElement("td");
+                tipoUser.innerText = users[i].tipoUser;
+                row.appendChild(tipoUser);
+                
+                let fechaRegistro = document.createElement("td");
+                fechaRegistro.innerText = users[i].fechaRegistro;
+                row.appendChild(fechaRegistro);
+                
+                let localidad = document.createElement("td");
+                localidad.innerText = "";
+                row.appendChild(localidad);
+                
+                let actions = document.createElement("td");
+                
+                let sessionsBtn = document.createElement("button");
+                sessionsBtn.innerText = "Sesiones";
+                actions.appendChild(sessionsBtn);
+                
+                let criticasBtn = document.createElement("button");
+                criticasBtn.innerText = "Críticas";
+                actions.appendChild(criticasBtn);
+                
+                row.appendChild(actions);
+                
+                table.appendChild(row);
+            }
+        }
+        
+    </script>
+</body>
+</html>

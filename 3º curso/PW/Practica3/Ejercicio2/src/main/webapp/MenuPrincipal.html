@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men&uacute; principal</title>
+</head>
+<body>
+	<div class="espectaculo-wrap" style="height: 600px;">
+        <div class="login-html">
+            <div class="login-form" style="margin-top: -50px;">
+                <h1>Men&uacute; Principal</h1>
+				<h1> Administrador</h1>
+                <form method="GET" action="ListadoUsuarios" class="menuPrincipal">
+					<div class="group"><input class="button" type="submit" value="Lista de usuarios"/></div>
+				</form>
+
+				<form method="GET" action="AltaEspectaculo">    
+					<div class="group"><input class="button" type="submit" value="Crear espectaculo"/></div>
+				</form>
+
+				<form method="GET" action="ModificarEspectaculo">    
+					<div class="group"><input class="button" type="submit" value="Modificar espectaculo"/></div>
+				</form>
+
+				<form method="GET" action="EliminarEspectaculo">    
+					<div class="group"><input class="button" type="submit" value="Eliminar espectaculo"/></div>
+				</form>
+
+				<form method="GET" action="EditarPerfil">    
+					<div class="group"><input class="button" type="submit" value="Editar perfil"/></div>
+				</form>
+				
+				<form method="POST" action="CerrarSesion">    
+					<div class="group"><input class="button" type="submit" value="Cerrar sesion"/></div>
+				</form>
+
+                <div class="hr">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

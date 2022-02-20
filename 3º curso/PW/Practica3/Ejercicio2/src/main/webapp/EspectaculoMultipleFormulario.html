@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir fechas y horas al espect&aacute;culo multiple</title>
+</head>
+<body>
+    <div class="espectaculo-wrap" style="height: 500px;">
+        <div class="login-html">
+            <div class="login-form" style="margin-top: -50px;">
+                <h1>Añadir hora y fecha</h1>
+                <h1>Espect&aacute;culo M&uacute;ltiple</h1>
+                <form method="POST" action="AltaEspectaculo">
+                    <div class="group"><label class="label" for="name">Fecha de Comienzo</label> <input id="name" class="input" type="date" name="fecha" required/></div>
+                    <div class="group"><label class="label" for="name">Hora de comienzo</label> <input id="name" class="input" type="time" name="hora" required/></div>
+                    <div class="group"><input class="button" type="submit" value="Crear"/></div>
+                    <div class="hr">&nbsp;</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

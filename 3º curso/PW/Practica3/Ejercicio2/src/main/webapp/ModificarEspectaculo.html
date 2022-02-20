@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Espect&aacute;culos</title>
+</head>
+<body>
+    <div class="login-wrap" style="height: 1210px;">
+        <div class="login-html">
+            <div class="login-form" style="margin-top: -50px;">
+                <h1>Editar Espect&aacute;culo</h1>
+                <form method="POST" action="ModificarEspectaculo">
+                    <div class="group"><label class="label" for="name">Titulo del espectaculo a modificar</label> <input id="name" class="input" type="text" name="tituloAntiguo" required/></div>
+                    <div class="group"><label class="label" for="name">Descripcion</label> <input id="name" class="input" type="text" name="descripcion" required/></div>
+                    <div class="group"><label class="label" for="name">Categor&iacute;a</label> <input id="name" class="input" type="text" name="categoria" required/></div>
+                    <div class="group"><label class="label" for="name">Aforo</label> <input id="name" class="input" type="number" name="aforo" required/></div>
+                    <div class="group"><label class="label" for="name">Localidad</label> <input id="name" class="input" type="text" name="localidad" required/></div>
+                    <div class="group"><label class="label" for="name">Fecha de Comienzo</label> <input id="name" class="input" type="date" name="fecha" required/></div>
+                    <div class="group"><label class="label" for="name">Fecha de Fin</label> <input id="name" class="input" type="date" name="fechaFin" required/></div>
+                    <div class="group"><label class="label" for="name">Hora de comienzo</label> <input id="name" class="input" type="time" name="hora" required/></div>
+                    <div class="group"><label class="label" for="name">Hora de fin</label> <input id="name" class="input" type="time" name="horaFin" required/></div>
+                    <div class="group"><label class="label" for="name">D&iacute;a</label> <input id="name" class="input" type="number" name="dia" required/></div>
+                    <div class="group">
+                        <label class="label" for="name">Tipo</label>
+                        <select name="tipo" class="input">
+                            <option value="Puntual">Puntual</option>
+                            <option value="Temporada">Temporada</option>
+                            <option value="Multiple">M&uacute;ltiple</option>
+                        </select>
+                    </div>
+                    <div class="group"><label class="label" for="name">N&uacute;mero de espect&aacute;culos</label> <input id="name" class="input" type="number" name="numeroEspectaculos" required/></div>
+                    <div class="group"><input class="button" type="submit" value="Editar"/></div>
+                    <div class="hr">&nbsp;</div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
